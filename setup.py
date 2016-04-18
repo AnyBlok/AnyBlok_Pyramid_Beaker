@@ -10,7 +10,7 @@ import os
 version = '0.1.0'
 
 requires = [
-    'anyblok_pyramid',
+    'anyblok_pyramid>=0.6.0',
     'pyramid_beaker',
 ]
 
