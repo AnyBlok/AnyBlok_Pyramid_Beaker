@@ -12,8 +12,8 @@
 CHANGELOG
 =========
 
-Futur
------
+0.1.0 (2016-04-18)
+------------------
 
 * [ADD] beaker setting and pyramid config
 * [ADD] db_name is store in the session and use it for anyblok_pyramid request
