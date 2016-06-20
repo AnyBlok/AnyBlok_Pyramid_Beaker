@@ -16,15 +16,15 @@ Information about the AnyBlok / Pyramid / Beaker project.
 Project Homepage
 ----------------
 
-AnyBlok is hosted on `Bitbucket <http://bitbucket.org>`_ - the main project
-page is at https://bitbucket.org/jssuzanne/anyblok_pyramid_beaker. Source code is
-tracked here using `Mercurial <http://mercurial.selenic.com>`_.
+AnyBlok is hosted on `github <http://github.com>`_ - the main project
+page is at https://github.com/AnyBlok/AnyBlok_Pyramid_Beaker. Source code is
+tracked here using `GIT <https://git-scm.com>`_.
 
 Releases and project status are available on Pypi at
 http://pypi.python.org/pypi/anyblok_pyramid_beaker.
 
 The most recent published version of this documentation should be at
-http://doc.pyramid.anyblok.org.
+http://doc.anyblok-pyramid-beaker.anyblok.org.
 
 Project Status
 --------------
@@ -62,7 +62,7 @@ Dependencies
 
 AnyBlok works with **Python 3.3** and later. The install process will
 ensure that `AnyBlok <http://doc.anyblok.org>`_,
-`AnyBlok / Pyramid <http://docs.anybox.fr/anyblok_pyramid/default>`_ 
+`AnyBlok / Pyramid <http://doc.anyblok-pyramid.anybox.org>`_ 
 are installed, in addition to other dependencies. The latest version of them 
 is strongly recommended.
 
@@ -89,4 +89,4 @@ Bugs
 ----
 
 Bugs and feature enhancements to AnyBlok should be reported on the `Issue
-tracker <https://bitbucket.org/jssuzanne/anyblok_pyramid_beaker/issues>`_.
+tracker <https://github.org/AnyBlok/Anyblok_Pyramid_Beaker/issues>`_.
