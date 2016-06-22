@@ -17,6 +17,11 @@
 .. image:: https://img.shields.io/pypi/v/AnyBlok_Pyramid_Beaker.svg
    :target: https://pypi.python.org/pypi/AnyBlok_Pyramid_Beaker/
    :alt: Version status
+      
+.. image:: https://readthedocs.org/projects/anyblok-pyramid/badge/?version=latest
+    :alt: Documentation Status
+    :scale: 100%
+    :target: https://doc.anyblok-pyramid.anyblok.org/en/latest/?badge=latest
 
 
 AnyBlok / Pyramid / Beaker
