@@ -18,10 +18,10 @@
    :target: https://pypi.python.org/pypi/AnyBlok_Pyramid_Beaker/
    :alt: Version status
       
-.. image:: https://readthedocs.org/projects/anyblok-pyramid/badge/?version=latest
+.. image:: https://readthedocs.org/projects/anyblok-pyramid-beaker/badge/?version=latest
     :alt: Documentation Status
     :scale: 100%
-    :target: https://doc.anyblok-pyramid.anyblok.org/en/latest/?badge=latest
+    :target: https://doc.anyblok-pyramid-beaker.anyblok.org/en/latest/?badge=latest
 
 
 AnyBlok / Pyramid / Beaker
