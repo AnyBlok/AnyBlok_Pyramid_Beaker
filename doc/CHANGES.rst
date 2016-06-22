@@ -12,8 +12,10 @@
 CHANGELOG
 =========
 
-Future
-------
+O.2.0 (2016-06-22)
+------------------
+
+* [FIX] utf-8 encoding need for readthedocs
 
 0.1.0 (2016-04-18)
 ------------------
