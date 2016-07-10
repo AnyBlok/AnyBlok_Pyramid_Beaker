@@ -13,6 +13,14 @@ Configuration.applications['pyramid']['configuration_groups'].append('beaker')
 Configuration.applications['gunicorn']['configuration_groups'].append('beaker')
 
 
+def get_db_name(request):
+    dbname = request.session.get('dbname')
+    if not dbname:
+        dbname = Configuration.get('db_name')
+
+    return dbname
+
+
 @Configuration.add('beaker', label="Beaker session")
 def define_beaker_option(group):
     group.add_argument('--beaker-data-dir',
@@ -111,3 +119,8 @@ def define_beaker_option(group):
                        dest='beaker.session.validate_key',
                        help="Validation key used to sign the AES encrypted "
                             "data.")
+
+
+@Configuration.add('plugins')
+def update_plugins(group):
+    group.set_defaults(get_db_name='anyblok_pyramid_beaker.config:get_db_name')
