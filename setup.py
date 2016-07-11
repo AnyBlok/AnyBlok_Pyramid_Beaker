@@ -7,10 +7,10 @@
 # obtain one at http://mozilla.org/MPL/2.0/.
 from setuptools import setup, find_packages
 import os
-version = '0.2.0'
+version = '1.0.0'
 
 requires = [
-    'anyblok_pyramid>=0.6.0',
+    'anyblok_pyramid>=0.7.0',
     'pyramid_beaker',
 ]
 
