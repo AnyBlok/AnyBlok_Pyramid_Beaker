@@ -29,8 +29,9 @@ env:
     - ANYBLOK_DATABASE_USER=postgres
 
 script:
+  - flake8 anyblok_pyramid_beaker
   - psql -c 'create database travis_ci_test;' -U postgres
-  - nosetests anyblok_pyramid_beaker/tests -v -s --with-coverage --cover-package=anyblok_pyramid
+  - nosetests anyblok_pyramid_beaker/tests -v -s --with-coverage --cover-package=anyblok_pyramid_beaker
   
 after_success:
   coveralls
