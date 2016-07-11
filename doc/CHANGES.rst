@@ -12,8 +12,8 @@
 CHANGELOG
 =========
 
-Future
-------
+1.0.0 (2016-07-11)
+------------------
 
 * [REF] adapt to AnyBlok 0.9.0 and AnyBlok / Pyramid 0.7.0
 * [REF] replace set/get callable by plugin get_db_name
