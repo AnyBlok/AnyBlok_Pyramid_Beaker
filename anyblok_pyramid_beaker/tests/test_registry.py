@@ -8,8 +8,7 @@
 from anyblok_pyramid.tests.testcase import PyramidDBTestCase
 from anyblok.config import Configuration
 from pyramid.response import Response
-from anyblok_pyramid import set_callable, get_db_name
-from .. import get_db_name as beaker_get_db_name
+from anyblok_pyramid_beaker.config import get_db_name
 
 
 def update_session_db_name(request):
@@ -33,14 +32,6 @@ def _get_db_name(request):
 
 class TestRegistry(PyramidDBTestCase):
 
-    def setUp(self):
-        super(TestRegistry, self).setUp()
-        set_callable(beaker_get_db_name)
-
-    def tearDown(self):
-        super(TestRegistry, self).tearDown()
-        set_callable(get_db_name)
-
     def add_route_and_views(self, config):
         config.add_route('dbname-login', '/test/login/')
         config.add_view(update_session_db_name, route_name='dbname-login')
@@ -60,3 +51,6 @@ class TestRegistry(PyramidDBTestCase):
         webserver.get('/test/logout/')
         res = webserver.get('/test/', status=200)
         self.assertEqual(Configuration.get('db_name'), res.body.decode('utf8'))
+
+    def test_plugin(self):
+        self.assertIs(Configuration.get('get_db_name'), get_db_name)

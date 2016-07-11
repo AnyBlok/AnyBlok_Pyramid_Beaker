@@ -5,19 +5,9 @@
 # This Source Code Form is subject to the terms of the Mozilla Public License,
 # v. 2.0. If a copy of the MPL was not distributed with this file,You can
 # obtain one at http://mozilla.org/MPL/2.0/.
-from anyblok_pyramid import set_callable
-from anyblok.config import Configuration
 
 
-def get_db_name(request):
-    dbname = request.session.get('dbname')
-    if not dbname:
-        dbname = Configuration.get('db_name')
-
-    return dbname
-
-
-def anyblok_init_config():
+def anyblok_init_config(unittest=False):
+    from anyblok.config import Configuration  # noqa for import order
+    from anyblok_pyramid.config import Configuration  # noqa for import order
     from . import config  # noqa to update configuration
-
-    set_callable(get_db_name)
