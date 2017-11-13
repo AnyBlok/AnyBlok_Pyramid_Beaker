@@ -12,6 +12,11 @@
 CHANGELOG
 =========
 
+Futur
+-----
+
+* [REF] config use the Configuration.add_configuration_groups
+
 1.0.0 (2016-07-11)
 ------------------
 
