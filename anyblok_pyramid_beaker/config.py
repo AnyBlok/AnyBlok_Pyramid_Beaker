@@ -10,8 +10,8 @@ from anyblok.config import Configuration
 from anyblok_pyramid import config  # noqa for update config
 
 
-Configuration.add_configuration_groups('pyramid', ['beaker'])
-Configuration.add_configuration_groups('gunicorn', ['beaker'])
+Configuration.add_application_properties('pyramid', ['beaker'])
+Configuration.add_application_properties('gunicorn', ['beaker'])
 
 
 def get_db_name(request):
