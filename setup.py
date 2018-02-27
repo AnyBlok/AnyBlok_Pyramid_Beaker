@@ -8,7 +8,7 @@
 # obtain one at http://mozilla.org/MPL/2.0/.
 from setuptools import setup, find_packages
 import os
-version = '1.1.0'
+version = '1.1.1'
 
 requires = [
     'anyblok_pyramid>=0.7.0',
