@@ -4,6 +4,8 @@ omit =
     */tests/*
     # omit anything in a test_bloks directory anywhere
     anyblok_pyramid_beaker/test_bloks/*
+    # omit anything in release
+    anyblok_pyramid_beaker/release.py
 
 [report]
 # Regexes for lines to exclude from consideration
