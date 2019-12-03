@@ -3,8 +3,11 @@ syntax: glob
 dist
 build
 doc/_build
+htmlcov
+venv
 
 .installed.cfg
+.coverage
 *.egg-info
 *.swp
 *.pyc
