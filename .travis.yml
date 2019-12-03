@@ -1,18 +1,19 @@
 language: python
+dist: xenial
 sudo: false
 
 python:
-  - "3.4"
-  - "3.5"
   - "3.6"
-  - "3.6-dev"
+  - "3.7"
+  - "3.8"
   - "3.7-dev"
+  - "3.8-dev"
   - "nightly"
 
 matrix:
   allow_failures:
-    - python: "3.6-dev"
     - python: "3.7-dev"
+    - python: "3.8-dev"
     - python: "nightly"
 
 virtualenv:
@@ -23,19 +24,12 @@ services:
 
 install:
   - pip install -U pip
-  # only eggs: do an erreur with wheel
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.7-dev' ]]; then pip install python_editor texttable PyYAML; fi
-  - if [[ $TRAVIS_PYTHON_VERSION == 'nightly' ]]; then pip install python_editor texttable PyYAML; fi
-  # only wheel
   - pip install wheel
+  - pip install -U flake8 pytest pytest-cov
   - pip install psycopg2
-  - pip install anyblok_pyramid
-  - pip install flake8
-  - pip install coverage
-  - pip install nose
   - pip install WebTest
   - pip install coveralls
-  - python setup.py develop
+  - pip install .
 
 env:
   global:
@@ -46,7 +40,7 @@ env:
 script:
   - flake8 anyblok_pyramid_beaker
   - psql -c 'create database travis_ci_test;' -U postgres
-  - nosetests anyblok_pyramid_beaker/tests -v -s --with-coverage --cover-package=anyblok_pyramid_beaker
+  - pytest --cov-report= --cov=anyblok_pyramid_beaker anyblok_pyramid_beaker/tests
   
 after_success:
-  coveralls
+  coveralls --data_file=.coverage --config_file=.coveragerc
