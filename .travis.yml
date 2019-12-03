@@ -40,7 +40,7 @@ env:
 script:
   - flake8 anyblok_pyramid_beaker
   - psql -c 'create database travis_ci_test;' -U postgres
-  - pytest --cov-report= --cov=anyblok_pyramid_beaker anyblok_pyramid_beaker/bloks
+  - pytest --cov-report= --cov=anyblok_pyramid_beaker anyblok_pyramid_beaker/tests
   
 after_success:
   coveralls --data_file=.coverage --config_file=.coveragerc
