@@ -55,7 +55,7 @@ setup(
     zip_safe=False,
     include_package_data=True,
     install_requires=requires,
-    tests_require=requires + ['nose', 'WebTest'],
+    tests_require=requires + ['pytest', 'WebTest'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
