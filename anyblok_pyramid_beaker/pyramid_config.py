@@ -31,6 +31,7 @@ def beaker_settings(settings):
         'beaker.session.key': Configuration.get('beaker.session.key'),
         'beaker.session.secret': Configuration.get('beaker.session.secret'),
         'beaker.session.secure': Configuration.get('beaker.session.secure'),
+        'beaker.session.httponly': Configuration.get('beaker.session.httponly'),
         'beaker.session.timeout': Configuration.get(
             'beaker.session.timeout'),
         'beaker.session.encrypt_key': Configuration.get(
