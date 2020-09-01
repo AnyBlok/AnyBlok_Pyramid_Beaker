@@ -104,6 +104,12 @@ def define_beaker_option(group):
                             "marked as secure. When marked as secure, "
                             "browsers are instructed to not send the cookie "
                             "over anything other than an SSL connection.")
+    group.add_argument('--beaker-httponly',
+                       dest='beaker.session.httponly',
+                       help="Using the HttpOnly flag when generating a cookie "
+                            "helps mitigate the risk of client side script "
+                            "accessing the protected cookie (if the browser "
+                            "supports it).")
     group.add_argument('--beaker-timeout',
                        dest='beaker.session.timeout',
                        help="Seconds until the session is considered invalid, "
